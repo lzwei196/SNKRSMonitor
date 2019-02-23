@@ -10,6 +10,7 @@ import traceback
 from collections import deque
 import os
 import requests
+from webhook import notifyDisc
 
 try:
     import winsound
@@ -115,6 +116,7 @@ def printSneaker(data, other=None):
         pass
     if data["restricted"]:
         str1 += "[受限]"
+    notifyDisc(str1)
     print(other, str1)
 
 
@@ -136,6 +138,11 @@ def printSneakerDetail(data):
         launchInfo = "不可购买"
         if product["merchStatus"] == "ACTIVE" and product["available"] and "stopSellDate" not in product.keys():
             launchInfo = "发售时间:" + getLocalTimeStr(product["startSellDate"])
+        data = 'name: %s \n \
+                name: % s \n \
+                name: % s \n \
+                name: % s ' % (name, price, publicType, launchInfo)
+        notifyDisc(data)
         print(name)
         print(price)
         print(publicType)
