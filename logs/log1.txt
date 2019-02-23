@@ -1,0 +1,15 @@
+running on proxy 12.164.246.247:35000
+-----------------------------------------------------------------------------------------------
+SNKRSMonitor 2.2
+做监控是为了方便各位sneakerhead，有问题请反馈，免费分享，请不要倒卖！！！！
+更新地址:https://pan.baidu.com/s/1h7sodzyH2-Cx1BWM5DdDbg
+作者:Niko(wechat:xvnk23)
+-----------------------------------------------------------------------------------------------
+中国
+正在抓取最新发布球鞋数据...
+https://api.nike.com/snkrs/content/v1/?&country=CN&language=zh-Hans&offset=0&orderBy=published
+访问服务器失败，3秒后重试
+https://api.nike.com/snkrs/content/v1/?&country=CN&language=zh-Hans&offset=0&orderBy=published
+访问服务器失败，3秒后重试
+https://api.nike.com/snkrs/content/v1/?&country=CN&language=zh-Hans&offset=0&orderBy=published
+访问服务器失败，3秒后重试
