@@ -5,11 +5,25 @@ SNKRSMonitor 2.2
 更新地址:https://pan.baidu.com/s/1h7sodzyH2-Cx1BWM5DdDbg
 作者:Niko(wechat:xvnk23)
 -----------------------------------------------------------------------------------------------
-中国
+美国
 正在抓取最新发布球鞋数据...
-https://api.nike.com/snkrs/content/v1/?&country=CN&language=zh-Hans&offset=0&orderBy=published
-访问服务器失败，3秒后重试
-https://api.nike.com/snkrs/content/v1/?&country=CN&language=zh-Hans&offset=0&orderBy=published
-访问服务器失败，3秒后重试
-https://api.nike.com/snkrs/content/v1/?&country=CN&language=zh-Hans&offset=0&orderBy=published
-访问服务器失败，3秒后重试
+https://api.nike.com/snkrs/content/v1/?&country=US&language=en&offset=0&orderBy=published Air Jordan VI Doernbecher Freestyle[Midnight Navy/Varsity Red/Metallic Gold/White][ACTIVE]
+https://api.nike.com/snkrs/content/v1/?&country=US&language=en&offset=0&orderBy=published Air Jordan I Couture[Black/Muslin/Gym Red][ACTIVE]
+https://api.nike.com/snkrs/content/v1/?&country=US&language=en&offset=0&orderBy=published iSPA React Low Black[Black/Gunsmoke/Metallic Silver][ACTIVE]
+https://api.nike.com/snkrs/content/v1/?&country=US&language=en&offset=0&orderBy=published iSPA React Low Velvet Brown[Velvet Brown/Dark Stucco/Black/Terra Orange][ACTIVE]
+https://api.nike.com/snkrs/content/v1/?&country=US&language=en&offset=0&orderBy=published iSPA React Low Summit White[Summit White/Khaki/Black/Deep Royal Blue][ACTIVE]
+https://api.nike.com/snkrs/content/v1/?&country=US&language=en&offset=0&orderBy=published Dunk High Black Hornet[Black/Dark Grey/Metallic Silver/Black][ACTIVE]
+https://api.nike.com/snkrs/content/v1/?&country=US&language=en&offset=0&orderBy=published Talking Shop 
+https://api.nike.com/snkrs/content/v1/?&country=US&language=en&offset=0&orderBy=published Street SNKRS Nolita
+https://api.nike.com/snkrs/content/v1/?&country=US&language=en&offset=0&orderBy=published Women's Air Jordan 1 Low Slip Chicago[Varsity Red/White/Black][INACTIVE]
+https://api.nike.com/snkrs/content/v1/?&country=US&language=en&offset=0&orderBy=published Women's Vandal 2K Floral[Summit White/Black/Summit White][HOLD]
+https://api.nike.com/snkrs/content/v1/?&country=US&language=en&offset=0&orderBy=published Dunk High SB Doernbecher Freestyle[Vivid Sulfur/Game Royal][HOLD]
+https://api.nike.com/snkrs/content/v1/?&country=US&language=en&offset=0&orderBy=published Women's Air Jordan 4 Splatter Pack[Siltstone Red/Phantom/Volt/Black][ACTIVE]
+https://api.nike.com/snkrs/content/v1/?&country=US&language=en&offset=0&orderBy=published Zoom Rookie Galaxy[Black/Action Red/Black][HOLD]
+https://api.nike.com/snkrs/content/v1/?&country=US&language=en&offset=0&orderBy=published Air Jordan VI NRG[Black/Dark Concord][ACTIVE]
+https://api.nike.com/snkrs/content/v1/?&country=US&language=en&offset=0&orderBy=published Zoom Pegasus 35 Turbo Gyakusou[Gold Dart/Iron Grey/Deep Burgundy/Pale Ivory][HOLD]
+https://api.nike.com/snkrs/content/v1/?&country=US&language=en&offset=0&orderBy=published Big Kids' Air Max 720 Team Crimson[Team Crimson/Gym Red/Ember Glow/Metallic Red Bronze][HOLD]
+https://api.nike.com/snkrs/content/v1/?&country=US&language=en&offset=0&orderBy=published Zoom Pegasus 35 Turbo Gyakusou[Fir/Gold Dart/Deep Burgundy/Black][HOLD]
+https://api.nike.com/snkrs/content/v1/?&country=US&language=en&offset=0&orderBy=published AIR FOAMPOSITE ONE PREMIUM Doernbecher Freestyle[Challenge Red/Black][HOLD]
+https://api.nike.com/snkrs/content/v1/?&country=US&language=en&offset=0&orderBy=published Air Max 720 Sunrise [Team Orange/Black/University Gold][ACTIVE]
+https://api.nike.com/snkrs/content/v1/?&country=US&language=en&offset=0&orderBy=published Women's Air Max 720 Sunset[Hyper Grape/Black/Hyper Pink][ACTIVE]

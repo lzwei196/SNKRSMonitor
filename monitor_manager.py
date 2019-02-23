@@ -30,7 +30,8 @@ proxies=[('12.164.246.247:35000','hype9049143:pwd994143'),
 
 path = 'D:\Codes\Bokx\SNKRSMonitor\logs'
 path = sys.argv[1]
-cmd = 'start cmd /c python snkrs.py %s %s %s ^> %s\log%s.txt' % (1, '12.164.246.247:35000', 'hype9049143:pwd994143', path, 1)
-cmd = 'start cmd /c python snkrs.py %s ^> %s\log%s.txt' % (1,  path, 1)
-call(cmd, shell=True)
+cmd1 = 'start cmd /c python snkrs.py %s %s %s ^> %s\log%s.txt' % (1, '12.164.246.247:35000', 'hype9049143:pwd994143', path, 1)
+cmd2 = 'start cmd /c python snkrs.py %s ^> %s\log%s.txt' % (1,  path, 2)
+call(cmd1, shell=True)
+call(cmd2, shell=True)
 print('all commands ran')
