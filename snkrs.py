@@ -24,6 +24,7 @@ urllib3.disable_warnings()
 
 ip_port=None
 auth=None
+nike_US_baseurl='https://www.nike.com/launch/t/'
 
 
 try:
@@ -61,7 +62,7 @@ def addseptag():
 
 addsepline()
 print("SNKRSMonitor 2.2")
-print("做监控是为了方便各位sneakerhead，有问题请反馈，免费分享，请不要倒卖！！！！")
+print("做监控是为了方便各位sneakerhead，有问题请反馈，免费分享，请不要倒卖！！！！".encode('utf-8'))
 print("更新地址:https://pan.baidu.com/s/1h7sodzyH2-Cx1BWM5DdDbg")
 print("作者:Niko(wechat:xvnk23)")
 addsepline()
@@ -116,7 +117,8 @@ def printSneaker(data, other=None):
         pass
     if data["restricted"]:
         str1 += "[受限]"
-    notifyDisc(str1)
+    #notifyDisc(str1)
+    notifyDisc(data['seoSlug'])
     print(other, str1)
 
 
@@ -138,6 +140,7 @@ def printSneakerDetail(data):
         launchInfo = "不可购买"
         if product["merchStatus"] == "ACTIVE" and product["available"] and "stopSellDate" not in product.keys():
             launchInfo = "发售时间:" + getLocalTimeStr(product["startSellDate"])
+        notifyDisc(data['seoSlug'])
         data = 'name: %s \n \
                 name: % s \n \
                 name: % s \n \
@@ -171,6 +174,9 @@ def requestSneakers(order, offset):
         for data in json_data["threads"]:
             shoes.append(data["id"])
             ludict[data["id"]] = getTime(data["lastUpdatedDate"])
+            #comment this out
+            #print(data)
+            exit(1)
             if offset == 0:
                 printSneaker(data, other=requrl)
         return shoes
