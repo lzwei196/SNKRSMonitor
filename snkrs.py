@@ -25,6 +25,8 @@ urllib3.disable_warnings()
 ip_port=None
 auth=None
 nike_US_baseurl='https://www.nike.com/launch/t/'
+nike_CHINA_baseurl='https://www.nike.com/cn/launch/t/'
+nike_baseurl='https.googlsadaf'
 
 
 try:
@@ -88,13 +90,39 @@ url = "https://api.nike.com/snkrs/content/v1/?"
 areaCode = sys.argv[1]
 if areaCode == "1":
     url += RegionURL.us.value
+    nike_baseurl = nike_US_baseurl
     print('美国')
 elif areaCode == "2":
     url += RegionURL.jp.value
+    raise ValueError('baseurl not implemented!!!!!.')
     print('日本')
 else:
     url += RegionURL.cn.value
+    nike_baseurl = nike_CHINA_baseurl
     print('中国')
+
+
+# user setup
+addsepline()
+# keyword = "off white "
+# #frequency = 3
+# warningTime = 5
+# inputfreq = input("请设定接口访问频率(秒)，访问频率过快可能会导致服务器异常，默认是3，最小是1:")
+# try:
+#     frequency = int(inputfreq)
+# except:
+#     print("输入出错，按照默认频率请求")
+# if frequency <= 0:
+#     frequency = 3
+# warning = input("请设定发现新款过后报警次数，默认是5，最小是1:")
+# try:
+#     warningTime = int(warning)
+# except:
+#     print("输入出错，按照默认次数报警")
+warningTime = 5
+keyword = input("设定库存监控关键词,多个关键词用空格区分(eg:off white):")
+# print("服务器实时请求接口中(" + str(frequency) + "秒每次)...")
+addseptag()
 
 # Sneaker data
 print("正在抓取最新发布球鞋数据...")
@@ -118,7 +146,7 @@ def printSneaker(data, other=None):
     if data["restricted"]:
         str1 += "[受限]"
     #notifyDisc(str1)
-    notifyDisc(data['seoSlug'])
+    notifyDisc(nike_US_baseurl + data['seoSlug'])
     print(other, str1)
 
 
@@ -140,7 +168,7 @@ def printSneakerDetail(data):
         launchInfo = "不可购买"
         if product["merchStatus"] == "ACTIVE" and product["available"] and "stopSellDate" not in product.keys():
             launchInfo = "发售时间:" + getLocalTimeStr(product["startSellDate"])
-        notifyDisc(data['seoSlug'])
+        notifyDisc(nike_US_baseurl + data['seoSlug'])
         data = 'name: %s \n \
                 name: % s \n \
                 name: % s \n \
@@ -165,6 +193,7 @@ def requestSneakers(order, offset):
     else:
         http=urllib3.PoolManager()
     r = http.request("GET", requrl)
+    time.sleep(0.4)
     shoes = []
     try:
         json_data = json.loads(r.data)
@@ -176,7 +205,6 @@ def requestSneakers(order, offset):
             ludict[data["id"]] = getTime(data["lastUpdatedDate"])
             #comment this out
             #print(data)
-            exit(1)
             if offset == 0:
                 printSneaker(data, other=requrl)
         return shoes
@@ -195,28 +223,7 @@ for num in range(0, 10000):
         break
     sneakers.extend(snkrs)
 
-# user setup
-addsepline()
-keyword = "off white "
-frequency = 3
-warningTime = 5
-inputfreq = input("请设定接口访问频率(秒)，访问频率过快可能会导致服务器异常，默认是3，最小是1:")
-try:
-    frequency = int(inputfreq)
-except:
-    print("输入出错，按照默认频率请求")
-if frequency <= 0:
-    frequency = 3
-warning = input("请设定发现新款过后报警次数，默认是5，最小是1:")
-try:
-    warningTime = int(warning)
-except:
-    print("输入出错，按照默认次数报警")
-if warningTime <= 0:
-    warningTime = 5
-keyword = input("设定库存监控关键词,多个关键词用空格区分(eg:off white):")
-print("服务器实时请求接口中(" + str(frequency) + "秒每次)...")
-addseptag()
+
 
 
 # refresh request
@@ -251,11 +258,12 @@ def timer(n):
                 http = urllib3.PoolManager()
             requesturl = url + OrderBy.updated.value + "&offset=0"
             r = http.request("GET", requesturl)
+            time.sleep(0.4)
             json_data = json.loads(r.data)
             datas = json_data["threads"]
         except:
             print("\r请求失败", flush=True)
-            timer(frequency)
+            timer(n)
             break
         for data in datas:
             sneakerid = data["id"]
@@ -299,7 +307,7 @@ def timer(n):
                                 i -= 1
                             break
             print("\r" + time.strftime("time :%Y-%m-%d %H:%M:%S", time.localtime(time.time())), end=" ")
-        time.sleep(frequency)
+        time.sleep(n)
 
 
 timer(3)
