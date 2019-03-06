@@ -310,5 +310,5 @@ def timer(n):
         time.sleep(n)
 
 
-timer(3)
+timer(10)
 # SNKRSMonitor
